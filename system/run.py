@@ -3,7 +3,6 @@ import json
 import sys
 from pathlib import Path
 
-# Add policy_intelligence to the path so its internal imports work
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "policy_intelligence"))
 

@@ -3,31 +3,42 @@ import json
 import sys
 from pathlib import Path
 
-# Adjust this import path if needed
-from decide import decide_case
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "policy_intelligence"))
 
-def load_jsonl(path):
-    with open(path, encoding="utf-8") as f:
-        return [json.loads(line) for line in f if line.strip()]
+from data_processing import CaseRepository
+from evidence_intelligence import FactExtractor
+from decide import decide_case
 
 def main():
     if len(sys.argv) != 3:
-        print("Usage: run <institution_folder> <output_file>")
+        print("Usage: python run.py <institution_folder> <output_file>")
         sys.exit(1)
 
     inst_folder = Path(sys.argv[1])
     out_file = Path(sys.argv[2])
 
-    cases = load_jsonl(inst_folder / "cases.jsonl")
-    alerts = load_jsonl(inst_folder / "alerts.jsonl")
-    customers = {c["customer_id"]: c for c in load_jsonl(inst_folder / "customers.jsonl")}
+    print(f"Loading institution from {inst_folder}...")
+    repo = CaseRepository(inst_folder)
+    extractor = FactExtractor()
 
     results = []
-    for case in cases:
-        case_alerts = [a for a in alerts if a.get("alert_id") in case.get("alert_ids", [])]
-        customer = customers.get(case.get("customer_id"), {})
-        result = decide_case(case, case_alerts, customer, [])
+    count = 0
+    for bundle in repo.iter_case_bundles():
+        facts = extractor.extract(bundle)
+        facts_dict = facts.__dict__ if hasattr(facts, "__dict__") else facts  # handle both
+
+        # Build simple case/alerts for the function
+        case = {"case_id": bundle.case_id, "alert_ids": bundle.alert_ids, "customer_id": bundle.customer_id}
+        alerts = [{"alert_id": a.alert_id, "rule_id": a.rule_id, "transaction_ids": a.transaction_ids} for a in bundle.alerts]
+        customer = {}
+
+        result = decide_case(case, alerts, customer, facts=facts_dict)
         results.append(result)
+        count += 1
+        if count % 100 == 0:
+            print(f"  processed {count}")
 
     out_file.parent.mkdir(parents=True, exist_ok=True)
     with open(out_file, "w", encoding="utf-8") as f:

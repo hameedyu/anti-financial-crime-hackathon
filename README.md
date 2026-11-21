@@ -11,6 +11,12 @@ Policy Intelligence
 Decision Intelligence
 Frontendgit 
 
+# Forewarning
+
+Working branch: feature/person1-person2-ingestion-facts
+
+The decision system and system/run.py are on this branch, not on main.
+
 ## Setup and running (Data Processing + Evidence Intelligence)
 
 Requirements: Python 3.11+ (standard library only; on Windows `py -3` works in place of `python`). The hackathon dataset is kept outside this repository. Set `AFC_INSTITUTIONS_DIR` to its `institutions` folder, or extract the hackathon zip next to this repository as `../hackathon/`.

@@ -1,0 +1,1 @@
+Close only when evidence explains every alert. If unexplained or suspicious, escalate. RFI only when one specific document would settle it and there is no suspicion.

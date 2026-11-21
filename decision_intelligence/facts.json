@@ -1,0 +1,1106 @@
+{
+  "case_id": "BK-CS100112",
+  "alert_ids": [
+    "BK-AL2450697",
+    "BK-AL2445260"
+  ],
+  "case": {
+    "case_id": "BK-CS100112",
+    "institution": "bank",
+    "customer_id": "BK-C683005",
+    "opened_at": "2026-08-15T06:00:00Z",
+    "review_window": {
+      "from": "2026-07-16",
+      "to": "2026-08-14"
+    },
+    "alert_ids": [
+      "BK-AL2450697",
+      "BK-AL2445260"
+    ],
+    "held_payment_id": null
+  },
+  "customer": {
+    "kind": "individual",
+    "name": "Kai Dundale",
+    "date_of_birth": "1993-05-06",
+    "occupation": "Accountant",
+    "employer": "Kingshurst Accountants LLP",
+    "company_number": null,
+    "incorporated_on": null,
+    "business_activity": null,
+    "address": "54 Wenden Place, Kelhurst, YD6 4XH",
+    "onboarded_on": "2019-07-18",
+    "risk_rating": "Low",
+    "declared": {
+      "source_of_funds": "Salary",
+      "account_purpose": "Everyday banking",
+      "expected_countries": [
+        "United Kingdom"
+      ],
+      "expected_channels": [
+        "Card",
+        "Bank transfer",
+        "Direct debit"
+      ],
+      "monthly_income_gbp": 2150,
+      "annual_turnover_gbp": null
+    },
+    "customer_id": "BK-C683005",
+    "account_ids": [
+      "BK-A33434818"
+    ]
+  },
+  "alerts": [
+    {
+      "alert_id": "BK-AL2445260",
+      "case_id": "BK-CS100112",
+      "customer_id": "BK-C683005",
+      "rule_name": "Unexpected higher-risk corridor",
+      "rule_id": "TM06",
+      "created_at": "2026-08-15T06:00:00Z",
+      "message": "In the 30 days to 14 August 2026, £7,702.22 moved to or from Lebanon, rated higher risk and not among the countries the customer declared. The limit is £5,000.00.",
+      "measured": {
+        "total_gbp": 7702.22,
+        "countries": "Lebanon",
+        "limit_gbp": 5000,
+        "window_days": 30
+      },
+      "transaction_ids": [
+        "BK-T721472580"
+      ]
+    },
+    {
+      "alert_id": "BK-AL2450697",
+      "case_id": "BK-CS100112",
+      "customer_id": "BK-C683005",
+      "rule_name": "Activity exceeds the expected profile",
+      "rule_id": "TM01",
+      "created_at": "2026-08-15T06:00:00Z",
+      "message": "In the 30 days to 14 August 2026, the account received £9,850.84, 4.6 times the declared monthly income of £2,150.00. The limit is 3 times.",
+      "measured": {
+        "received_gbp": 9850.84,
+        "baseline_gbp": 2150,
+        "multiple": 4.58,
+        "limit_multiple": 3,
+        "window_days": 30
+      },
+      "transaction_ids": [
+        "BK-T958921779",
+        "BK-T721472580"
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "transaction_id": "BK-T842990180",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-04-17T10:31:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 8.44,
+      "counterparty_name": "Fuelpoint",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 8.44
+    },
+    {
+      "transaction_id": "BK-T239595865",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-04-21T17:51:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 41.37,
+      "counterparty_name": "Home Hardware",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 41.37
+    },
+    {
+      "transaction_id": "BK-T174712422",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-04-25T07:30:00Z",
+      "direction": "in",
+      "channel": "bacs",
+      "amount_gbp": 2169.65,
+      "counterparty_name": "Kingshurst Accountants LLP",
+      "counterparty_account": "24-20-84 93519650",
+      "counterparty_country": "United Kingdom",
+      "reference": "SALARY KINGSHURST ACCOUNTANTS LLP",
+      "location": null,
+      "currency": "GBP",
+      "amount": 2169.65
+    },
+    {
+      "transaction_id": "BK-T270731298",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-04-25T16:57:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 79.52,
+      "counterparty_name": "Fresh Bakery",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 79.52
+    },
+    {
+      "transaction_id": "BK-T727496806",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-04-27T08:34:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 60.51,
+      "counterparty_name": "Pizza Kitchen",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 60.51
+    },
+    {
+      "transaction_id": "BK-T373642798",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-01T06:10:00Z",
+      "direction": "out",
+      "channel": "standing_order",
+      "amount_gbp": 850,
+      "counterparty_name": "Gargate Lettings",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "RENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 850
+    },
+    {
+      "transaction_id": "BK-T444560407",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-02T16:41:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 48.91,
+      "counterparty_name": "Fresh Bakery",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 48.91
+    },
+    {
+      "transaction_id": "BK-T990090152",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-04T14:18:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 77.7,
+      "counterparty_name": "Gym Plus",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 77.7
+    },
+    {
+      "transaction_id": "BK-T803094828",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-05T13:43:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 14.75,
+      "counterparty_name": "Home Hardware",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 14.75
+    },
+    {
+      "transaction_id": "BK-T987572674",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-06T06:10:00Z",
+      "direction": "out",
+      "channel": "direct_debit",
+      "amount_gbp": 111.84,
+      "counterparty_name": "Brightwatt Energy",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "ENERGY ACCOUNT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 111.84
+    },
+    {
+      "transaction_id": "BK-T316626012",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-07T09:43:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 48.73,
+      "counterparty_name": "Fresh Bakery",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 48.73
+    },
+    {
+      "transaction_id": "BK-T952806830",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-09T11:09:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 35.21,
+      "counterparty_name": "Greenway Supermarket",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 35.21
+    },
+    {
+      "transaction_id": "BK-T817080277",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-11T21:44:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 6.19,
+      "counterparty_name": "Corner Pharmacy",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 6.19
+    },
+    {
+      "transaction_id": "BK-T204749951",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-12T06:10:00Z",
+      "direction": "out",
+      "channel": "direct_debit",
+      "amount_gbp": 23.47,
+      "counterparty_name": "Talkline Mobile",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "MOBILE",
+      "location": null,
+      "currency": "GBP",
+      "amount": 23.47
+    },
+    {
+      "transaction_id": "BK-T424590147",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-15T06:10:00Z",
+      "direction": "out",
+      "channel": "direct_debit",
+      "amount_gbp": 149.8,
+      "counterparty_name": "Lockstead Council",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "COUNCIL TAX",
+      "location": null,
+      "currency": "GBP",
+      "amount": 149.8
+    },
+    {
+      "transaction_id": "BK-T958284027",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-15T18:17:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 63,
+      "counterparty_name": "Pizza Kitchen",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 63
+    },
+    {
+      "transaction_id": "BK-T272335253",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-17T08:42:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 82.17,
+      "counterparty_name": "Fresh Bakery",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 82.17
+    },
+    {
+      "transaction_id": "BK-T424164227",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-21T13:40:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 4.12,
+      "counterparty_name": "Gym Plus",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 4.12
+    },
+    {
+      "transaction_id": "BK-T967489290",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-22T09:21:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 75.43,
+      "counterparty_name": "Pageturn Books",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 75.43
+    },
+    {
+      "transaction_id": "BK-T281236621",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-25T07:30:00Z",
+      "direction": "in",
+      "channel": "bacs",
+      "amount_gbp": 2157.79,
+      "counterparty_name": "Kingshurst Accountants LLP",
+      "counterparty_account": "90-20-72 91853072",
+      "counterparty_country": "United Kingdom",
+      "reference": "SALARY KINGSHURST ACCOUNTANTS LLP",
+      "location": null,
+      "currency": "GBP",
+      "amount": 2157.79
+    },
+    {
+      "transaction_id": "BK-T607079075",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-25T20:24:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 58.56,
+      "counterparty_name": "Pageturn Books",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 58.56
+    },
+    {
+      "transaction_id": "BK-T103594168",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-26T12:27:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 45.37,
+      "counterparty_name": "Pageturn Books",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 45.37
+    },
+    {
+      "transaction_id": "BK-T742319514",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-28T12:00:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 62.06,
+      "counterparty_name": "Gym Plus",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 62.06
+    },
+    {
+      "transaction_id": "BK-T561448963",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-30T10:21:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 39.44,
+      "counterparty_name": "Pageturn Books",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 39.44
+    },
+    {
+      "transaction_id": "BK-T974554101",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-05-31T10:46:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 80.33,
+      "counterparty_name": "Online Marketplace",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 80.33
+    },
+    {
+      "transaction_id": "BK-T205734399",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-01T06:10:00Z",
+      "direction": "out",
+      "channel": "standing_order",
+      "amount_gbp": 850,
+      "counterparty_name": "Gargate Lettings",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "RENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 850
+    },
+    {
+      "transaction_id": "BK-T727890365",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-01T10:19:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 31.95,
+      "counterparty_name": "Fresh Bakery",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 31.95
+    },
+    {
+      "transaction_id": "BK-T605543543",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-06T06:10:00Z",
+      "direction": "out",
+      "channel": "direct_debit",
+      "amount_gbp": 89.51,
+      "counterparty_name": "Brightwatt Energy",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "ENERGY ACCOUNT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 89.51
+    },
+    {
+      "transaction_id": "BK-T663633985",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-12T06:10:00Z",
+      "direction": "out",
+      "channel": "direct_debit",
+      "amount_gbp": 24.19,
+      "counterparty_name": "Talkline Mobile",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "MOBILE",
+      "location": null,
+      "currency": "GBP",
+      "amount": 24.19
+    },
+    {
+      "transaction_id": "BK-T604748339",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-13T20:57:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 80.68,
+      "counterparty_name": "Corner Pharmacy",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 80.68
+    },
+    {
+      "transaction_id": "BK-T449101733",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-14T13:27:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 70.46,
+      "counterparty_name": "Online Marketplace",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 70.46
+    },
+    {
+      "transaction_id": "BK-T390704568",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-15T06:10:00Z",
+      "direction": "out",
+      "channel": "direct_debit",
+      "amount_gbp": 126.97,
+      "counterparty_name": "Lockstead Council",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "COUNCIL TAX",
+      "location": null,
+      "currency": "GBP",
+      "amount": 126.97
+    },
+    {
+      "transaction_id": "BK-T675712778",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-15T11:20:00Z",
+      "direction": "out",
+      "channel": "swift",
+      "amount_gbp": 7702.22,
+      "currency": "USD",
+      "amount": 10243.95,
+      "counterparty_name": "Kelstead Hotel and Gardens",
+      "counterparty_account": "account ending 8676",
+      "counterparty_country": "Lebanon",
+      "reference": "BOOKING 59396",
+      "location": null
+    },
+    {
+      "transaction_id": "BK-T398026864",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-15T16:34:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 2.88,
+      "counterparty_name": "Streamline Media",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 2.88
+    },
+    {
+      "transaction_id": "BK-T512623512",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-17T17:38:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 58.52,
+      "counterparty_name": "Greenway Supermarket",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 58.52
+    },
+    {
+      "transaction_id": "BK-T331141918",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-18T12:24:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 2.84,
+      "counterparty_name": "Pageturn Books",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 2.84
+    },
+    {
+      "transaction_id": "BK-T479861116",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-20T14:23:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 32.39,
+      "counterparty_name": "Fuelpoint",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 32.39
+    },
+    {
+      "transaction_id": "BK-T223085373",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-22T10:33:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 29.1,
+      "counterparty_name": "Online Marketplace",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 29.1
+    },
+    {
+      "transaction_id": "BK-T802911797",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-23T08:56:00Z",
+      "direction": "out",
+      "channel": "card",
+      "amount_gbp": 68.65,
+      "counterparty_name": "Streamline Media",
+      "counterparty_account": null,
+      "counterparty_country": "United Kingdom",
+      "reference": "CARD PAYMENT",
+      "location": null,
+      "currency": "GBP",
+      "amount": 68.65
+    },
+    {
+      "transaction_id": "BK-T952030477",
+      "customer_id": "BK-C683005",
+      "account_id": "BK-A33434818",
+      "booked_at": "2026-06-25T07:30:00Z",
+      "direction": "in",
+      "channel": "bacs",
+      "amount_gbp": 2134.64,
+      "counterparty_name": "Kingshurst Accountants LLP",
+      "counterparty_account": "52-13-41 55338582",
+      "counterparty_country": "United Kingdom",
+      "reference": "SALARY KINGSHURST ACCOUNTANTS LLP",
+      "location": null,
+      "currency": "GBP",
+      "amount": 2134.64
+    }
+  ],
+  "evidence": [
+    {
+      "meta": {
+        "doc_id": "EML-8464",
+        "customer_id": "BK-C683005",
+        "type": "venue_email",
+        "title": "Email from Kelstead Hotel and Gardens",
+        "dated": "2026-08-11",
+        "file": "evidence/EML-8464.md"
+      },
+      "text": "# Email from Kelstead Hotel and Gardens\n\n**Document ID:** EML-8464\n**Dated:** 11 August 2026\n\nDear Client,\n\nWe were sorry to hear that you have decided to cancel your wedding booking with us at Kelstead Hotel and Gardens. \n\nAs per our previous correspondence, we have processed a full refund of your deposit in the amount of £7,702.22 in relation to your reservation, BOOKING 59396. \n\nPlease allow the standard time for these funds to reflect in your account. We wish you the very best for the future. \n\nKind regards,\n\nThe Events Team\nKelstead Hotel and Gardens\n"
+    },
+    {
+      "meta": {
+        "doc_id": "KYC-5599",
+        "customer_id": "BK-C683005",
+        "type": "due_diligence_summary",
+        "title": "Customer due diligence summary",
+        "dated": "2019-07-18",
+        "file": "evidence/KYC-5599.md"
+      },
+      "text": "# Customer due diligence summary\n\n**Document ID:** KYC-5599\n**Dated:** 18 July 2019\n\n**Customer:** Kai Dundale\n**Customer type:** individual\n**Date of birth:** 1993-05-06\n**Occupation:** Accountant\n**Employer:** Kingshurst Accountants LLP\n**Address:** 54 Wenden Place, Kelhurst, YD6 4XH\n**Declared monthly income:** £2,150.00\n**Source of funds:** Salary\n**Account purpose:** Everyday banking\n**Countries expected:** United Kingdom\n**Payment methods expected:** Card, Bank transfer, Direct debit\n**Risk rating:** Low\n\nIdentity document and live selfie verified. Address verified against a utility bill.\n"
+    },
+    {
+      "meta": {
+        "doc_id": "POA-7626",
+        "customer_id": "BK-C683005",
+        "type": "proof_of_address",
+        "title": "Energy bill used as proof of address",
+        "dated": "2019-06-12",
+        "file": "evidence/POA-7626.md"
+      },
+      "text": "# Energy bill used as proof of address\n\n**Document ID:** POA-7626\n**Dated:** 12 June 2019\n\n**Supplier:** Brightwatt Energy\n**Account holder:** Kai Dundale\n**Supply address:** 54 Wenden Place, Kelhurst, YD6 4XH\n**Amount due:** £84.36\n"
+    }
+  ],
+  "previous_reviews": [
+    {
+      "review_id": "BK-R975884",
+      "customer_id": "BK-C683005",
+      "reviewed_on": "2026-06-17",
+      "rule_id": "TM06",
+      "verdict": "CLOSE",
+      "note": "Closed. Wedding venue deposit to Kelstead Hotel and Gardens; booking contract on file."
+    }
+  ],
+  "internal_list_sample": [
+    {
+      "entry_id": "BK-L11213",
+      "kind": "individual",
+      "name": "Jesse Penmere",
+      "date_of_birth": "1974-09-11",
+      "identifiers": {
+        "internal_case": "IC-2025-255"
+      },
+      "address": "139 Fernstead Avenue, Stanfield, FW17 1YQ",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-02-27"
+    },
+    {
+      "entry_id": "BK-L11224",
+      "kind": "individual",
+      "name": "Robin Bramby",
+      "date_of_birth": "1979-07-23",
+      "identifiers": {
+        "internal_case": "IC-2025-131"
+      },
+      "address": "22 Wilworth Avenue, Aldcote, AR17 8AS",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-04-25"
+    },
+    {
+      "entry_id": "BK-L11894",
+      "kind": "individual",
+      "name": "Sidney Penley",
+      "date_of_birth": "1984-02-24",
+      "identifiers": {
+        "internal_case": "IC-2025-544"
+      },
+      "address": "14 Bromholt Close, Elmridge, YF13 2LA",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-05-03"
+    },
+    {
+      "entry_id": "BK-L12580",
+      "kind": "individual",
+      "name": "Robin Fernworth",
+      "date_of_birth": "1971-02-13",
+      "identifiers": {
+        "internal_case": "IC-2025-276"
+      },
+      "address": "90 Halden Close, Aldley, XR18 4PT",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-02-27"
+    },
+    {
+      "entry_id": "BK-L12967",
+      "kind": "individual",
+      "name": "Logan Millridge",
+      "date_of_birth": "1974-11-23",
+      "identifiers": {},
+      "address": "Unit 4B, Glenridge Works, Corcombe",
+      "reason": "Subject of internal investigation IC-2025-343. Ran Wilford Imports Ltd from Unit 4B. Relationship exited in 2025.",
+      "added_on": "2025-04-14"
+    },
+    {
+      "entry_id": "BK-L14252",
+      "kind": "individual",
+      "name": "Avery Ashdale",
+      "date_of_birth": "1980-01-18",
+      "identifiers": {
+        "internal_case": "IC-2025-777"
+      },
+      "address": "8 Drayford Street, Oakden, JH6 7NF",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-05-10"
+    },
+    {
+      "entry_id": "BK-L14294",
+      "kind": "individual",
+      "name": "Rowan Cormore",
+      "date_of_birth": "1983-09-07",
+      "identifiers": {},
+      "address": "130 Fernden Gardens, Draymore, HY1 5SG",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-09-02"
+    },
+    {
+      "entry_id": "BK-L16184",
+      "kind": "individual",
+      "name": "Taylor Bramstead",
+      "date_of_birth": "1984-03-22",
+      "identifiers": {
+        "internal_case": "IC-2025-596"
+      },
+      "address": "155 Oakton Gardens, Corbrook, ZX6 8UA",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-04-19"
+    },
+    {
+      "entry_id": "BK-L16439",
+      "kind": "individual",
+      "name": "Emery Radholt",
+      "date_of_birth": "1973-08-11",
+      "identifiers": {
+        "internal_case": "IC-2025-256"
+      },
+      "address": "154 Falfield Terrace, Oakwell, DD13 8WJ",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-03-10"
+    },
+    {
+      "entry_id": "BK-L16675",
+      "kind": "individual",
+      "name": "Logan Gardale",
+      "date_of_birth": "1988-05-02",
+      "identifiers": {},
+      "address": "44 Langby Way, Bromcombe, XD16 6LZ",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-02-08"
+    },
+    {
+      "entry_id": "BK-L17011",
+      "kind": "individual",
+      "name": "Sasha Aldmere",
+      "date_of_birth": "1982-05-28",
+      "identifiers": {},
+      "address": "Unit 4B, Bramhurst Works, Millmore",
+      "reason": "Subject of internal investigation IC-2025-555. Ran Garworth Imports Ltd from Unit 4B. Relationship exited in 2025.",
+      "added_on": "2025-03-05"
+    },
+    {
+      "entry_id": "BK-L17953",
+      "kind": "individual",
+      "name": "Marley Selby",
+      "date_of_birth": "1973-07-12",
+      "identifiers": {},
+      "address": "Unit 4B, Langden Works, Ferndale",
+      "reason": "Subject of internal investigation IC-2025-626. Ran Glenworth Imports Ltd from Unit 4B. Relationship exited in 2025.",
+      "added_on": "2025-08-15"
+    },
+    {
+      "entry_id": "BK-L18384",
+      "kind": "individual",
+      "name": "Taylor Oakton",
+      "date_of_birth": "1975-03-04",
+      "identifiers": {},
+      "address": "Unit 4B, Lockley Works, Lockmore",
+      "reason": "Subject of internal investigation IC-2025-150. Ran Margate Imports Ltd from Unit 4B. Relationship exited in 2025.",
+      "added_on": "2025-07-08"
+    },
+    {
+      "entry_id": "BK-L18952",
+      "kind": "individual",
+      "name": "Casey Dunworth",
+      "date_of_birth": "1976-12-10",
+      "identifiers": {},
+      "address": "73 Kelhurst Terrace, Rayden, RX3 4FF",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-07-25"
+    },
+    {
+      "entry_id": "BK-L20521",
+      "kind": "individual",
+      "name": "Peyton Marstead",
+      "date_of_birth": "1968-01-12",
+      "identifiers": {
+        "internal_case": "IC-2025-469"
+      },
+      "address": "88 Raydale Lane, Haldale, EP4 2NE",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-06-23"
+    },
+    {
+      "entry_id": "BK-L21007",
+      "kind": "individual",
+      "name": "Noel Rayton",
+      "date_of_birth": "1996-04-24",
+      "identifiers": {},
+      "address": "169 Kelmore Street, Hartmere, ZF8 3PB",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-05-08"
+    },
+    {
+      "entry_id": "BK-L21114",
+      "kind": "individual",
+      "name": "Emery Lynworth",
+      "date_of_birth": "1992-06-17",
+      "identifiers": {},
+      "address": "106 Corden Way, Wengate, TH13 5PJ",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-02-22"
+    },
+    {
+      "entry_id": "BK-L22610",
+      "kind": "individual",
+      "name": "Finley Wilhurst",
+      "date_of_birth": "1972-07-22",
+      "identifiers": {
+        "internal_case": "IC-2025-406"
+      },
+      "address": "49 Lockden Lane, Glenfield, SB9 3AS",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-02-23"
+    },
+    {
+      "entry_id": "BK-L23297",
+      "kind": "individual",
+      "name": "Kit Dunridge",
+      "date_of_birth": "1980-10-04",
+      "identifiers": {},
+      "address": null,
+      "reason": "Exited customer: relationship ended in 2025 after unexplained third-party payments.",
+      "added_on": "2025-09-23"
+    },
+    {
+      "entry_id": "BK-L24646",
+      "kind": "individual",
+      "name": "Avery Kingsridge",
+      "date_of_birth": "1976-11-12",
+      "identifiers": {
+        "internal_case": "IC-2025-920"
+      },
+      "address": "87 Ashton Close, Millcote, QU4 3RT",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-03-27"
+    },
+    {
+      "entry_id": "BK-L25651",
+      "kind": "individual",
+      "name": "Parker Calgate",
+      "date_of_birth": "1995-06-18",
+      "identifiers": {},
+      "address": "166 Hollworth Street, Elmholt, BU18 2RU",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-07-03"
+    },
+    {
+      "entry_id": "BK-L26044",
+      "kind": "individual",
+      "name": "Hayden Ashholt",
+      "date_of_birth": "1972-09-12",
+      "identifiers": {},
+      "address": "66 Dunworth Avenue, Ferngate, AT15 4LW",
+      "reason": "Named in a production order received in 2025.",
+      "added_on": "2024-10-31"
+    },
+    {
+      "entry_id": "BK-L26304",
+      "kind": "individual",
+      "name": "Nico Ashford",
+      "date_of_birth": "1987-11-24",
+      "identifiers": {},
+      "address": "157 Whitmere Street, Oakridge, TT15 1NZ",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-05-17"
+    },
+    {
+      "entry_id": "BK-L26956",
+      "kind": "individual",
+      "name": "Nico Kingsgate",
+      "date_of_birth": "1995-07-18",
+      "identifiers": {},
+      "address": "107 Bromfield Place, Falgate, RB6 1NN",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-07-10"
+    },
+    {
+      "entry_id": "BK-L27122",
+      "kind": "individual",
+      "name": "Noel Halbrook",
+      "date_of_birth": "1980-08-06",
+      "identifiers": {},
+      "address": null,
+      "reason": "Exited customer: relationship ended in 2025 after unexplained third-party payments.",
+      "added_on": "2025-02-23"
+    },
+    {
+      "entry_id": "BK-L27158",
+      "kind": "individual",
+      "name": "Taylor Hollcote",
+      "date_of_birth": "1990-02-02",
+      "identifiers": {},
+      "address": "117 Hollstead Lane, Raystead, RP9 8NQ",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-07-09"
+    },
+    {
+      "entry_id": "BK-L27392",
+      "kind": "individual",
+      "name": "Jules Thorndale",
+      "date_of_birth": "1987-01-12",
+      "identifiers": {},
+      "address": "124 Millgate Terrace, Wilmere, NS19 9JZ",
+      "reason": "Customer relationship exited in 2024 after unexplained third-party payments.",
+      "added_on": "2025-04-16"
+    },
+    {
+      "entry_id": "BK-L28358",
+      "kind": "individual",
+      "name": "Emery Hartfield",
+      "date_of_birth": "1968-10-16",
+      "identifiers": {
+        "internal_case": "IC-2025-891"
+      },
+      "address": "17 Millworth Gardens, Garcombe, ZT6 3UQ",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-06-27"
+    },
+    {
+      "entry_id": "BK-L28703",
+      "kind": "individual",
+      "name": "Rowan Kingsbrook",
+      "date_of_birth": "1976-07-16",
+      "identifiers": {
+        "internal_case": "IC-2025-752"
+      },
+      "address": "10 Millden Avenue, Cranbrook, LJ6 7LT",
+      "reason": "Subject of an unresolved specialist investigation. Do not deal with this person or companies they control.",
+      "added_on": "2025-06-23"
+    },
+    {
+      "entry_id": "BK-L28884",
+      "kind": "individual",
+      "name": "Nico Sandmere",
+      "date_of_birth": "1960-08-03",
+      "identifiers": {},
+      "address": "87 Elmwell Gardens, Sandden, YB14 9GJ",
+      "reason": "Named in a production order received in 2025.",
+      "added_on": "2024-03-13"
+    }
+  ]
+}

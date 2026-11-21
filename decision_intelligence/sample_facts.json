@@ -1,0 +1,23 @@
+{
+  "case_id": "BK-CS100112",
+  "alert_ids": [
+    "BK-AL2450697",
+    "BK-AL2445260"
+  ],
+  "customer": {
+    "kind": "individual",
+    "declared_monthly_income_gbp": 2650
+  },
+  "alerts": [
+    {
+      "rule_id": "TM01",
+      "message": "Inflows far above declared income"
+    },
+    {
+      "rule_id": "TM05",
+      "message": "Large cash deposit"
+    }
+  ],
+  "evidence": [],
+  "notes": "No invoice or source-of-funds document on file. Activity unexplained."
+}

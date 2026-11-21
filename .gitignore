@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+.DS_Store
+__MACOSX/
+# local copies of the hackathon dataset and generated diagnostics are never committed
+institutions/
+facts_*.jsonl
